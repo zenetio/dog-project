@@ -3,7 +3,7 @@ def extract_VGG16(tensor):
 	return VGG16(weights='imagenet', include_top=False).predict(preprocess_input(tensor))
 
 def extract_VGG19(tensor):
-	from keras.applications.vgg19 import VGG19, preprocess_input
+	from tensorflow.keras.applications.vgg19 import VGG19, preprocess_input
 	return VGG19(weights='imagenet', include_top=False).predict(preprocess_input(tensor))
 
 def extract_Resnet50(tensor):
